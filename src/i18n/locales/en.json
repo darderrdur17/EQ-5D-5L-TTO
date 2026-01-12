@@ -1,0 +1,219 @@
+{
+  "common": {
+    "next": "Next",
+    "back": "Back",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "yes": "Yes",
+    "no": "No",
+    "language": "Language"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "fullName": "Full Name",
+    "role": "Role",
+    "interviewer": "Interviewer",
+    "admin": "Administrator",
+    "signIn": "Sign in to your account",
+    "createAccount": "Create your account",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "signingIn": "Signing in...",
+    "registering": "Registering..."
+  },
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "interview": "Interview",
+    "admin": "Admin"
+  },
+  "interview": {
+    "title": "TTO Interview",
+    "consent": {
+      "title": "Informed Consent",
+      "description": "Please read and agree to participate in this study.",
+      "agree": "I agree to participate"
+    },
+    "warmup": {
+      "title": "Your Health Today",
+      "description": "Please indicate which statements best describe your own health today.",
+      "mobility": {
+        "title": "Mobility",
+        "level1": "I have no problems in walking about",
+        "level2": "I have slight problems in walking about",
+        "level3": "I have moderate problems in walking about",
+        "level4": "I have severe problems in walking about",
+        "level5": "I am unable to walk about"
+      },
+      "selfCare": {
+        "title": "Self-Care",
+        "level1": "I have no problems washing or dressing myself",
+        "level2": "I have slight problems washing or dressing myself",
+        "level3": "I have moderate problems washing or dressing myself",
+        "level4": "I have severe problems washing or dressing myself",
+        "level5": "I am unable to wash or dress myself"
+      },
+      "usualActivities": {
+        "title": "Usual Activities",
+        "subtitle": "(e.g. work, study, housework, family or leisure activities)",
+        "level1": "I have no problems doing my usual activities",
+        "level2": "I have slight problems doing my usual activities",
+        "level3": "I have moderate problems doing my usual activities",
+        "level4": "I have severe problems doing my usual activities",
+        "level5": "I am unable to do my usual activities"
+      },
+      "painDiscomfort": {
+        "title": "Pain / Discomfort",
+        "level1": "I have no pain or discomfort",
+        "level2": "I have slight pain or discomfort",
+        "level3": "I have moderate pain or discomfort",
+        "level4": "I have severe pain or discomfort",
+        "level5": "I have extreme pain or discomfort"
+      },
+      "anxietyDepression": {
+        "title": "Anxiety / Depression",
+        "level1": "I am not anxious or depressed",
+        "level2": "I am slightly anxious or depressed",
+        "level3": "I am moderately anxious or depressed",
+        "level4": "I am severely anxious or depressed",
+        "level5": "I am extremely anxious or depressed"
+      },
+      "vas": {
+        "title": "How good or bad is your health TODAY?",
+        "description": "On a scale from 0 (worst health you can imagine) to 100 (best health you can imagine)",
+        "worst": "Worst health",
+        "best": "Best health"
+      }
+    },
+    "practice": {
+      "title": "Practice Task",
+      "description": "Let's practice with an example before the main tasks."
+    },
+    "tto": {
+      "title": "Time Trade-Off Task",
+      "taskNumber": "Task {{number}} of {{total}}",
+      "lifeA": "Life A",
+      "lifeB": "Life B",
+      "healthState": "Health State",
+      "fullHealth": "Full Health",
+      "years": "years",
+      "instructions": "Move the slider to find the point where you would be indifferent between Life A and Life B.",
+      "worseThanDeath": "This state may be considered worse than death",
+      "leadTime": "Lead-Time TTO"
+    },
+    "feedback": {
+      "title": "Review Your Responses",
+      "description": "Please review your responses. Flag any that you'd like to reconsider.",
+      "flag": "Flag for review",
+      "flagReason": "Reason for flagging"
+    },
+    "dce": {
+      "title": "Discrete Choice Experiment",
+      "taskNumber": "Choice {{number}} of {{total}}",
+      "choosePreferred": "Which health state would you prefer?",
+      "stateA": "State A",
+      "stateB": "State B"
+    },
+    "demographics": {
+      "title": "Demographics",
+      "description": "Please provide some background information.",
+      "age": "Age",
+      "gender": "Gender",
+      "male": "Male",
+      "female": "Female",
+      "other": "Other",
+      "preferNotToSay": "Prefer not to say",
+      "education": "Highest Education Level",
+      "primary": "Primary",
+      "secondary": "Secondary",
+      "tertiary": "Tertiary/University",
+      "postgraduate": "Postgraduate",
+      "employment": "Employment Status",
+      "employed": "Employed",
+      "unemployed": "Unemployed",
+      "student": "Student",
+      "retired": "Retired",
+      "homemaker": "Homemaker"
+    },
+    "complete": {
+      "title": "Interview Complete",
+      "description": "Thank you for completing the interview.",
+      "thankYou": "Your responses have been recorded."
+    },
+    "steps": {
+      "consent": "Consent",
+      "warmup": "Warm-up",
+      "practice": "Practice",
+      "tto": "TTO Tasks",
+      "feedback": "Feedback",
+      "dce": "DCE",
+      "demographics": "Demographics",
+      "complete": "Complete"
+    }
+  },
+  "dashboard": {
+    "welcome": "Welcome",
+    "totalSessions": "Total Sessions",
+    "completedSessions": "Completed",
+    "inProgressSessions": "In Progress",
+    "averageTime": "Avg. Time",
+    "newSession": "Start New Session",
+    "recentSessions": "Recent Sessions",
+    "noSessions": "No sessions yet",
+    "viewAll": "View All",
+    "tips": "Interview Tips",
+    "respondentCode": "Respondent Code"
+  },
+  "admin": {
+    "title": "Admin Dashboard",
+    "users": "Users",
+    "sessions": "All Sessions",
+    "analytics": "Analytics",
+    "export": "Export Data",
+    "exportCSV": "Export as CSV",
+    "exportJSON": "Export as JSON",
+    "quotaProgress": "Quota Progress",
+    "interviewerPerformance": "Interviewer Performance"
+  },
+  "copilot": {
+    "title": "AI Interview Co-pilot",
+    "placeholder": "Ask for protocol guidance...",
+    "send": "Send",
+    "thinking": "Thinking...",
+    "error": "Failed to get response. Please try again."
+  },
+  "landing": {
+    "hero": {
+      "title": "EQ-5D-5L Time Trade-Off Survey",
+      "subtitle": "Professional digital platform for health state valuation research",
+      "cta": "Get Started"
+    },
+    "features": {
+      "title": "Key Features",
+      "tto": {
+        "title": "Interactive TTO Tasks",
+        "description": "Visual decision aids for accurate health state valuation"
+      },
+      "multilingual": {
+        "title": "Multi-Language Support",
+        "description": "Available in English, Spanish, Chinese, Indonesian, and Malay"
+      },
+      "ai": {
+        "title": "AI Interview Co-pilot",
+        "description": "Real-time protocol guidance and data quality monitoring"
+      },
+      "export": {
+        "title": "Data Export",
+        "description": "Download session data in CSV or JSON format"
+      }
+    }
+  }
+}

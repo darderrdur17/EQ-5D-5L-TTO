@@ -1,0 +1,219 @@
+{
+  "common": {
+    "next": "下一步",
+    "back": "返回",
+    "submit": "提交",
+    "cancel": "取消",
+    "save": "保存",
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "yes": "是",
+    "no": "否",
+    "language": "语言"
+  },
+  "auth": {
+    "login": "登录",
+    "register": "注册",
+    "logout": "退出",
+    "email": "电子邮件",
+    "password": "密码",
+    "fullName": "全名",
+    "role": "角色",
+    "interviewer": "访谈员",
+    "admin": "管理员",
+    "signIn": "登录您的账户",
+    "createAccount": "创建您的账户",
+    "noAccount": "还没有账户？",
+    "hasAccount": "已有账户？",
+    "signingIn": "正在登录...",
+    "registering": "正在注册..."
+  },
+  "nav": {
+    "home": "首页",
+    "dashboard": "仪表板",
+    "interview": "访谈",
+    "admin": "管理"
+  },
+  "interview": {
+    "title": "TTO访谈",
+    "consent": {
+      "title": "知情同意",
+      "description": "请阅读并同意参与本研究。",
+      "agree": "我同意参与"
+    },
+    "warmup": {
+      "title": "您今天的健康状况",
+      "description": "请选择最能描述您今天健康状况的陈述。",
+      "mobility": {
+        "title": "行动能力",
+        "level1": "我行走没有任何困难",
+        "level2": "我行走有一些困难",
+        "level3": "我行走有中等程度的困难",
+        "level4": "我行走有严重困难",
+        "level5": "我无法行走"
+      },
+      "selfCare": {
+        "title": "自我照顾",
+        "level1": "我洗澡或穿衣没有任何困难",
+        "level2": "我洗澡或穿衣有一些困难",
+        "level3": "我洗澡或穿衣有中等程度的困难",
+        "level4": "我洗澡或穿衣有严重困难",
+        "level5": "我无法自己洗澡或穿衣"
+      },
+      "usualActivities": {
+        "title": "日常活动",
+        "subtitle": "（如工作、学习、家务、家庭或休闲活动）",
+        "level1": "我进行日常活动没有任何困难",
+        "level2": "我进行日常活动有一些困难",
+        "level3": "我进行日常活动有中等程度的困难",
+        "level4": "我进行日常活动有严重困难",
+        "level5": "我无法进行日常活动"
+      },
+      "painDiscomfort": {
+        "title": "疼痛/不适",
+        "level1": "我没有任何疼痛或不适",
+        "level2": "我有轻微的疼痛或不适",
+        "level3": "我有中等程度的疼痛或不适",
+        "level4": "我有严重的疼痛或不适",
+        "level5": "我有极度的疼痛或不适"
+      },
+      "anxietyDepression": {
+        "title": "焦虑/抑郁",
+        "level1": "我不焦虑或抑郁",
+        "level2": "我有一些焦虑或抑郁",
+        "level3": "我有中等程度的焦虑或抑郁",
+        "level4": "我有严重的焦虑或抑郁",
+        "level5": "我有极度的焦虑或抑郁"
+      },
+      "vas": {
+        "title": "您今天的健康状况如何？",
+        "description": "在0（您能想象的最差健康）到100（您能想象的最佳健康）的量表上",
+        "worst": "最差健康",
+        "best": "最佳健康"
+      }
+    },
+    "practice": {
+      "title": "练习任务",
+      "description": "在进行正式任务之前，让我们先做一个练习。"
+    },
+    "tto": {
+      "title": "时间权衡任务",
+      "taskNumber": "任务 {{number}} / {{total}}",
+      "lifeA": "生活A",
+      "lifeB": "生活B",
+      "healthState": "健康状态",
+      "fullHealth": "完全健康",
+      "years": "年",
+      "instructions": "移动滑块找到您对生活A和生活B无差异的点。",
+      "worseThanDeath": "此状态可能被认为比死亡更糟",
+      "leadTime": "前置时间TTO"
+    },
+    "feedback": {
+      "title": "查看您的回答",
+      "description": "请查看您的回答。标记任何您想重新考虑的回答。",
+      "flag": "标记以供审核",
+      "flagReason": "标记原因"
+    },
+    "dce": {
+      "title": "离散选择实验",
+      "taskNumber": "选择 {{number}} / {{total}}",
+      "choosePreferred": "您更喜欢哪种健康状态？",
+      "stateA": "状态A",
+      "stateB": "状态B"
+    },
+    "demographics": {
+      "title": "人口统计信息",
+      "description": "请提供一些背景信息。",
+      "age": "年龄",
+      "gender": "性别",
+      "male": "男",
+      "female": "女",
+      "other": "其他",
+      "preferNotToSay": "不愿透露",
+      "education": "最高学历",
+      "primary": "小学",
+      "secondary": "中学",
+      "tertiary": "大学",
+      "postgraduate": "研究生",
+      "employment": "就业状况",
+      "employed": "在职",
+      "unemployed": "待业",
+      "student": "学生",
+      "retired": "退休",
+      "homemaker": "家庭主妇/夫"
+    },
+    "complete": {
+      "title": "访谈完成",
+      "description": "感谢您完成访谈。",
+      "thankYou": "您的回答已被记录。"
+    },
+    "steps": {
+      "consent": "同意",
+      "warmup": "热身",
+      "practice": "练习",
+      "tto": "TTO任务",
+      "feedback": "反馈",
+      "dce": "DCE",
+      "demographics": "人口统计",
+      "complete": "完成"
+    }
+  },
+  "dashboard": {
+    "welcome": "欢迎",
+    "totalSessions": "总会话数",
+    "completedSessions": "已完成",
+    "inProgressSessions": "进行中",
+    "averageTime": "平均时间",
+    "newSession": "开始新会话",
+    "recentSessions": "最近会话",
+    "noSessions": "暂无会话",
+    "viewAll": "查看全部",
+    "tips": "访谈技巧",
+    "respondentCode": "受访者代码"
+  },
+  "admin": {
+    "title": "管理仪表板",
+    "users": "用户",
+    "sessions": "所有会话",
+    "analytics": "分析",
+    "export": "导出数据",
+    "exportCSV": "导出为CSV",
+    "exportJSON": "导出为JSON",
+    "quotaProgress": "配额进度",
+    "interviewerPerformance": "访谈员表现"
+  },
+  "copilot": {
+    "title": "AI访谈助手",
+    "placeholder": "询问协议指导...",
+    "send": "发送",
+    "thinking": "思考中...",
+    "error": "获取回复失败，请重试。"
+  },
+  "landing": {
+    "hero": {
+      "title": "EQ-5D-5L时间权衡调查",
+      "subtitle": "专业的健康状态估值研究数字平台",
+      "cta": "开始使用"
+    },
+    "features": {
+      "title": "主要功能",
+      "tto": {
+        "title": "交互式TTO任务",
+        "description": "用于准确健康状态估值的可视化决策辅助"
+      },
+      "multilingual": {
+        "title": "多语言支持",
+        "description": "支持英语、西班牙语、中文、印尼语和马来语"
+      },
+      "ai": {
+        "title": "AI访谈助手",
+        "description": "实时协议指导和数据质量监控"
+      },
+      "export": {
+        "title": "数据导出",
+        "description": "以CSV或JSON格式下载会话数据"
+      }
+    }
+  }
+}

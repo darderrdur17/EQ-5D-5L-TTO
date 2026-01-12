@@ -1,0 +1,219 @@
+{
+  "common": {
+    "next": "Siguiente",
+    "back": "Atrás",
+    "submit": "Enviar",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "yes": "Sí",
+    "no": "No",
+    "language": "Idioma"
+  },
+  "auth": {
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "logout": "Cerrar sesión",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "fullName": "Nombre completo",
+    "role": "Rol",
+    "interviewer": "Entrevistador",
+    "admin": "Administrador",
+    "signIn": "Inicia sesión en tu cuenta",
+    "createAccount": "Crea tu cuenta",
+    "noAccount": "¿No tienes cuenta?",
+    "hasAccount": "¿Ya tienes cuenta?",
+    "signingIn": "Iniciando sesión...",
+    "registering": "Registrando..."
+  },
+  "nav": {
+    "home": "Inicio",
+    "dashboard": "Panel",
+    "interview": "Entrevista",
+    "admin": "Admin"
+  },
+  "interview": {
+    "title": "Entrevista TTO",
+    "consent": {
+      "title": "Consentimiento informado",
+      "description": "Por favor lea y acepte participar en este estudio.",
+      "agree": "Acepto participar"
+    },
+    "warmup": {
+      "title": "Su salud hoy",
+      "description": "Indique qué afirmaciones describen mejor su salud hoy.",
+      "mobility": {
+        "title": "Movilidad",
+        "level1": "No tengo problemas para caminar",
+        "level2": "Tengo problemas leves para caminar",
+        "level3": "Tengo problemas moderados para caminar",
+        "level4": "Tengo problemas graves para caminar",
+        "level5": "No puedo caminar"
+      },
+      "selfCare": {
+        "title": "Cuidado personal",
+        "level1": "No tengo problemas para lavarme o vestirme",
+        "level2": "Tengo problemas leves para lavarme o vestirme",
+        "level3": "Tengo problemas moderados para lavarme o vestirme",
+        "level4": "Tengo problemas graves para lavarme o vestirme",
+        "level5": "No puedo lavarme o vestirme"
+      },
+      "usualActivities": {
+        "title": "Actividades cotidianas",
+        "subtitle": "(ej. trabajo, estudio, tareas domésticas, actividades familiares o de ocio)",
+        "level1": "No tengo problemas para realizar mis actividades cotidianas",
+        "level2": "Tengo problemas leves para realizar mis actividades cotidianas",
+        "level3": "Tengo problemas moderados para realizar mis actividades cotidianas",
+        "level4": "Tengo problemas graves para realizar mis actividades cotidianas",
+        "level5": "No puedo realizar mis actividades cotidianas"
+      },
+      "painDiscomfort": {
+        "title": "Dolor / Malestar",
+        "level1": "No tengo dolor ni malestar",
+        "level2": "Tengo dolor o malestar leve",
+        "level3": "Tengo dolor o malestar moderado",
+        "level4": "Tengo dolor o malestar grave",
+        "level5": "Tengo dolor o malestar extremo"
+      },
+      "anxietyDepression": {
+        "title": "Ansiedad / Depresión",
+        "level1": "No estoy ansioso/a ni deprimido/a",
+        "level2": "Estoy ligeramente ansioso/a o deprimido/a",
+        "level3": "Estoy moderadamente ansioso/a o deprimido/a",
+        "level4": "Estoy muy ansioso/a o deprimido/a",
+        "level5": "Estoy extremadamente ansioso/a o deprimido/a"
+      },
+      "vas": {
+        "title": "¿Qué tan buena o mala es su salud HOY?",
+        "description": "En una escala de 0 (la peor salud imaginable) a 100 (la mejor salud imaginable)",
+        "worst": "Peor salud",
+        "best": "Mejor salud"
+      }
+    },
+    "practice": {
+      "title": "Tarea de práctica",
+      "description": "Practiquemos con un ejemplo antes de las tareas principales."
+    },
+    "tto": {
+      "title": "Tarea de Compensación Temporal",
+      "taskNumber": "Tarea {{number}} de {{total}}",
+      "lifeA": "Vida A",
+      "lifeB": "Vida B",
+      "healthState": "Estado de salud",
+      "fullHealth": "Salud plena",
+      "years": "años",
+      "instructions": "Mueva el control deslizante para encontrar el punto donde le sería indiferente entre la Vida A y la Vida B.",
+      "worseThanDeath": "Este estado puede considerarse peor que la muerte",
+      "leadTime": "TTO de tiempo de espera"
+    },
+    "feedback": {
+      "title": "Revise sus respuestas",
+      "description": "Por favor revise sus respuestas. Marque las que desee reconsiderar.",
+      "flag": "Marcar para revisión",
+      "flagReason": "Razón para marcar"
+    },
+    "dce": {
+      "title": "Experimento de elección discreta",
+      "taskNumber": "Elección {{number}} de {{total}}",
+      "choosePreferred": "¿Qué estado de salud preferiría?",
+      "stateA": "Estado A",
+      "stateB": "Estado B"
+    },
+    "demographics": {
+      "title": "Datos demográficos",
+      "description": "Por favor proporcione información de fondo.",
+      "age": "Edad",
+      "gender": "Género",
+      "male": "Masculino",
+      "female": "Femenino",
+      "other": "Otro",
+      "preferNotToSay": "Prefiero no decir",
+      "education": "Nivel educativo más alto",
+      "primary": "Primaria",
+      "secondary": "Secundaria",
+      "tertiary": "Terciario/Universidad",
+      "postgraduate": "Posgrado",
+      "employment": "Situación laboral",
+      "employed": "Empleado/a",
+      "unemployed": "Desempleado/a",
+      "student": "Estudiante",
+      "retired": "Jubilado/a",
+      "homemaker": "Amo/a de casa"
+    },
+    "complete": {
+      "title": "Entrevista completada",
+      "description": "Gracias por completar la entrevista.",
+      "thankYou": "Sus respuestas han sido registradas."
+    },
+    "steps": {
+      "consent": "Consentimiento",
+      "warmup": "Calentamiento",
+      "practice": "Práctica",
+      "tto": "Tareas TTO",
+      "feedback": "Retroalimentación",
+      "dce": "DCE",
+      "demographics": "Demografía",
+      "complete": "Completado"
+    }
+  },
+  "dashboard": {
+    "welcome": "Bienvenido/a",
+    "totalSessions": "Sesiones totales",
+    "completedSessions": "Completadas",
+    "inProgressSessions": "En progreso",
+    "averageTime": "Tiempo promedio",
+    "newSession": "Iniciar nueva sesión",
+    "recentSessions": "Sesiones recientes",
+    "noSessions": "Sin sesiones aún",
+    "viewAll": "Ver todas",
+    "tips": "Consejos de entrevista",
+    "respondentCode": "Código de encuestado"
+  },
+  "admin": {
+    "title": "Panel de administración",
+    "users": "Usuarios",
+    "sessions": "Todas las sesiones",
+    "analytics": "Análisis",
+    "export": "Exportar datos",
+    "exportCSV": "Exportar como CSV",
+    "exportJSON": "Exportar como JSON",
+    "quotaProgress": "Progreso de cuota",
+    "interviewerPerformance": "Rendimiento del entrevistador"
+  },
+  "copilot": {
+    "title": "Co-piloto de entrevista IA",
+    "placeholder": "Pida orientación del protocolo...",
+    "send": "Enviar",
+    "thinking": "Pensando...",
+    "error": "Error al obtener respuesta. Intente de nuevo."
+  },
+  "landing": {
+    "hero": {
+      "title": "Encuesta EQ-5D-5L de Compensación Temporal",
+      "subtitle": "Plataforma digital profesional para investigación de valoración de estados de salud",
+      "cta": "Comenzar"
+    },
+    "features": {
+      "title": "Características principales",
+      "tto": {
+        "title": "Tareas TTO interactivas",
+        "description": "Ayudas visuales para valoración precisa de estados de salud"
+      },
+      "multilingual": {
+        "title": "Soporte multiidioma",
+        "description": "Disponible en inglés, español, chino, indonesio y malayo"
+      },
+      "ai": {
+        "title": "Co-piloto de entrevista IA",
+        "description": "Orientación de protocolo en tiempo real y monitoreo de calidad"
+      },
+      "export": {
+        "title": "Exportación de datos",
+        "description": "Descargue datos de sesión en formato CSV o JSON"
+      }
+    }
+  }
+}

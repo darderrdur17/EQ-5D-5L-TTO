@@ -1,0 +1,219 @@
+{
+  "common": {
+    "next": "Selanjutnya",
+    "back": "Kembali",
+    "submit": "Kirim",
+    "cancel": "Batal",
+    "save": "Simpan",
+    "loading": "Memuat...",
+    "error": "Kesalahan",
+    "success": "Berhasil",
+    "yes": "Ya",
+    "no": "Tidak",
+    "language": "Bahasa"
+  },
+  "auth": {
+    "login": "Masuk",
+    "register": "Daftar",
+    "logout": "Keluar",
+    "email": "Email",
+    "password": "Kata Sandi",
+    "fullName": "Nama Lengkap",
+    "role": "Peran",
+    "interviewer": "Pewawancara",
+    "admin": "Administrator",
+    "signIn": "Masuk ke akun Anda",
+    "createAccount": "Buat akun Anda",
+    "noAccount": "Belum punya akun?",
+    "hasAccount": "Sudah punya akun?",
+    "signingIn": "Sedang masuk...",
+    "registering": "Mendaftar..."
+  },
+  "nav": {
+    "home": "Beranda",
+    "dashboard": "Dasbor",
+    "interview": "Wawancara",
+    "admin": "Admin"
+  },
+  "interview": {
+    "title": "Wawancara TTO",
+    "consent": {
+      "title": "Persetujuan Informasi",
+      "description": "Silakan baca dan setujui untuk berpartisipasi dalam studi ini.",
+      "agree": "Saya setuju untuk berpartisipasi"
+    },
+    "warmup": {
+      "title": "Kesehatan Anda Hari Ini",
+      "description": "Silakan tunjukkan pernyataan mana yang paling menggambarkan kesehatan Anda hari ini.",
+      "mobility": {
+        "title": "Mobilitas",
+        "level1": "Saya tidak memiliki masalah dalam berjalan",
+        "level2": "Saya memiliki sedikit masalah dalam berjalan",
+        "level3": "Saya memiliki masalah sedang dalam berjalan",
+        "level4": "Saya memiliki masalah parah dalam berjalan",
+        "level5": "Saya tidak dapat berjalan"
+      },
+      "selfCare": {
+        "title": "Perawatan Diri",
+        "level1": "Saya tidak memiliki masalah dalam mandi atau berpakaian",
+        "level2": "Saya memiliki sedikit masalah dalam mandi atau berpakaian",
+        "level3": "Saya memiliki masalah sedang dalam mandi atau berpakaian",
+        "level4": "Saya memiliki masalah parah dalam mandi atau berpakaian",
+        "level5": "Saya tidak dapat mandi atau berpakaian sendiri"
+      },
+      "usualActivities": {
+        "title": "Aktivitas Biasa",
+        "subtitle": "(misalnya bekerja, belajar, pekerjaan rumah, keluarga atau kegiatan rekreasi)",
+        "level1": "Saya tidak memiliki masalah melakukan aktivitas biasa saya",
+        "level2": "Saya memiliki sedikit masalah melakukan aktivitas biasa saya",
+        "level3": "Saya memiliki masalah sedang melakukan aktivitas biasa saya",
+        "level4": "Saya memiliki masalah parah melakukan aktivitas biasa saya",
+        "level5": "Saya tidak dapat melakukan aktivitas biasa saya"
+      },
+      "painDiscomfort": {
+        "title": "Nyeri / Ketidaknyamanan",
+        "level1": "Saya tidak memiliki nyeri atau ketidaknyamanan",
+        "level2": "Saya memiliki sedikit nyeri atau ketidaknyamanan",
+        "level3": "Saya memiliki nyeri atau ketidaknyamanan sedang",
+        "level4": "Saya memiliki nyeri atau ketidaknyamanan parah",
+        "level5": "Saya memiliki nyeri atau ketidaknyamanan ekstrem"
+      },
+      "anxietyDepression": {
+        "title": "Kecemasan / Depresi",
+        "level1": "Saya tidak cemas atau depresi",
+        "level2": "Saya sedikit cemas atau depresi",
+        "level3": "Saya cukup cemas atau depresi",
+        "level4": "Saya sangat cemas atau depresi",
+        "level5": "Saya sangat ekstrem cemas atau depresi"
+      },
+      "vas": {
+        "title": "Seberapa baik atau buruk kesehatan Anda HARI INI?",
+        "description": "Pada skala 0 (kesehatan terburuk yang dapat Anda bayangkan) hingga 100 (kesehatan terbaik yang dapat Anda bayangkan)",
+        "worst": "Kesehatan terburuk",
+        "best": "Kesehatan terbaik"
+      }
+    },
+    "practice": {
+      "title": "Tugas Latihan",
+      "description": "Mari kita berlatih dengan contoh sebelum tugas utama."
+    },
+    "tto": {
+      "title": "Tugas Time Trade-Off",
+      "taskNumber": "Tugas {{number}} dari {{total}}",
+      "lifeA": "Kehidupan A",
+      "lifeB": "Kehidupan B",
+      "healthState": "Kondisi Kesehatan",
+      "fullHealth": "Kesehatan Penuh",
+      "years": "tahun",
+      "instructions": "Gerakkan slider untuk menemukan titik di mana Anda merasa sama antara Kehidupan A dan Kehidupan B.",
+      "worseThanDeath": "Kondisi ini mungkin dianggap lebih buruk dari kematian",
+      "leadTime": "Lead-Time TTO"
+    },
+    "feedback": {
+      "title": "Tinjau Respons Anda",
+      "description": "Silakan tinjau respons Anda. Tandai yang ingin Anda pertimbangkan ulang.",
+      "flag": "Tandai untuk ditinjau",
+      "flagReason": "Alasan penandaan"
+    },
+    "dce": {
+      "title": "Eksperimen Pilihan Diskrit",
+      "taskNumber": "Pilihan {{number}} dari {{total}}",
+      "choosePreferred": "Kondisi kesehatan mana yang Anda pilih?",
+      "stateA": "Kondisi A",
+      "stateB": "Kondisi B"
+    },
+    "demographics": {
+      "title": "Demografi",
+      "description": "Silakan berikan beberapa informasi latar belakang.",
+      "age": "Usia",
+      "gender": "Jenis Kelamin",
+      "male": "Laki-laki",
+      "female": "Perempuan",
+      "other": "Lainnya",
+      "preferNotToSay": "Tidak ingin menyebutkan",
+      "education": "Tingkat Pendidikan Tertinggi",
+      "primary": "SD",
+      "secondary": "SMP/SMA",
+      "tertiary": "Perguruan Tinggi",
+      "postgraduate": "Pascasarjana",
+      "employment": "Status Pekerjaan",
+      "employed": "Bekerja",
+      "unemployed": "Tidak Bekerja",
+      "student": "Pelajar/Mahasiswa",
+      "retired": "Pensiun",
+      "homemaker": "Ibu/Bapak Rumah Tangga"
+    },
+    "complete": {
+      "title": "Wawancara Selesai",
+      "description": "Terima kasih telah menyelesaikan wawancara.",
+      "thankYou": "Respons Anda telah dicatat."
+    },
+    "steps": {
+      "consent": "Persetujuan",
+      "warmup": "Pemanasan",
+      "practice": "Latihan",
+      "tto": "Tugas TTO",
+      "feedback": "Umpan Balik",
+      "dce": "DCE",
+      "demographics": "Demografi",
+      "complete": "Selesai"
+    }
+  },
+  "dashboard": {
+    "welcome": "Selamat Datang",
+    "totalSessions": "Total Sesi",
+    "completedSessions": "Selesai",
+    "inProgressSessions": "Sedang Berlangsung",
+    "averageTime": "Waktu Rata-rata",
+    "newSession": "Mulai Sesi Baru",
+    "recentSessions": "Sesi Terbaru",
+    "noSessions": "Belum ada sesi",
+    "viewAll": "Lihat Semua",
+    "tips": "Tips Wawancara",
+    "respondentCode": "Kode Responden"
+  },
+  "admin": {
+    "title": "Dasbor Admin",
+    "users": "Pengguna",
+    "sessions": "Semua Sesi",
+    "analytics": "Analitik",
+    "export": "Ekspor Data",
+    "exportCSV": "Ekspor sebagai CSV",
+    "exportJSON": "Ekspor sebagai JSON",
+    "quotaProgress": "Kemajuan Kuota",
+    "interviewerPerformance": "Kinerja Pewawancara"
+  },
+  "copilot": {
+    "title": "AI Co-pilot Wawancara",
+    "placeholder": "Minta panduan protokol...",
+    "send": "Kirim",
+    "thinking": "Berpikir...",
+    "error": "Gagal mendapatkan respons. Silakan coba lagi."
+  },
+  "landing": {
+    "hero": {
+      "title": "Survei Time Trade-Off EQ-5D-5L",
+      "subtitle": "Platform digital profesional untuk penelitian penilaian kondisi kesehatan",
+      "cta": "Mulai"
+    },
+    "features": {
+      "title": "Fitur Utama",
+      "tto": {
+        "title": "Tugas TTO Interaktif",
+        "description": "Alat bantu keputusan visual untuk penilaian kondisi kesehatan yang akurat"
+      },
+      "multilingual": {
+        "title": "Dukungan Multi-Bahasa",
+        "description": "Tersedia dalam Bahasa Inggris, Spanyol, Cina, Indonesia, dan Melayu"
+      },
+      "ai": {
+        "title": "AI Co-pilot Wawancara",
+        "description": "Panduan protokol real-time dan pemantauan kualitas data"
+      },
+      "export": {
+        "title": "Ekspor Data",
+        "description": "Unduh data sesi dalam format CSV atau JSON"
+      }
+    }
+  }
+}

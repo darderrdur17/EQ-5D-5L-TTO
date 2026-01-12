@@ -1,0 +1,13 @@
+project_id = "raeconbrdftodcwihviz"
+
+[functions.ai-copilot]
+verify_jwt = false
+
+[functions.send-performance-report]
+verify_jwt = false
+
+[functions.send-quality-notification]
+verify_jwt = false
+
+[functions.send-interview-notification]
+verify_jwt = false
