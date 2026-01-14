@@ -21,11 +21,28 @@ interface TTOData {
   final_value: number;
 }
 
+interface CompletionDataPoint {
+  date: string;
+  completed: number;
+  total: number;
+}
+
+interface TTODataPoint {
+  date: string;
+  value: number;
+}
+
+interface QualityDataPoint {
+  date: string;
+  passed: number;
+  flagged: number;
+}
+
 export function AnalyticsCharts() {
   const [loading, setLoading] = useState(true);
-  const [completionData, setCompletionData] = useState<any[]>([]);
-  const [ttoData, setTTOData] = useState<any[]>([]);
-  const [qualityData, setQualityData] = useState<any[]>([]);
+  const [completionData, setCompletionData] = useState<CompletionDataPoint[]>([]);
+  const [ttoData, setTTOData] = useState<TTODataPoint[]>([]);
+  const [qualityData, setQualityData] = useState<QualityDataPoint[]>([]);
 
   useEffect(() => {
     fetchAnalytics();

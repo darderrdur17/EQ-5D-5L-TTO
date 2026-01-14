@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
@@ -61,17 +61,7 @@ export function PerformanceComparison() {
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const [dailyData, setDailyData] = useState<DailyData[]>([]);
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    if (selectedIds.length > 0) {
-      calculateDailyData();
-    }
-  }, [selectedIds, interviewers]);
-
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     try {
       setLoading(true);
 
@@ -148,9 +138,9 @@ export function PerformanceComparison() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [toast]);
 
-  const calculateDailyData = async () => {
+  const calculateDailyData = useCallback(async () => {
     const days = eachDayOfInterval({
       start: subDays(new Date(), 13),
       end: new Date(),
@@ -181,7 +171,17 @@ export function PerformanceComparison() {
     });
 
     setDailyData(daily);
-  };
+  }, [selectedIds, interviewers]);
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
+
+  useEffect(() => {
+    if (selectedIds.length > 0) {
+      calculateDailyData();
+    }
+  }, [selectedIds, calculateDailyData]);
 
   const toggleSelection = (id: string) => {
     setSelectedIds(prev => 

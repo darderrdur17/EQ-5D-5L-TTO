@@ -31,7 +31,7 @@ const getNotificationContent = (type: string, respondentCode: string, qualitySta
         alertType: 'goal_at_risk',
         color: '#f59e0b'
       };
-    case 'quality_update':
+    case 'quality_update': {
       const statusInfo = {
         approved: { emoji: '✅', color: '#22c55e', alertType: 'quality_update' },
         flagged: { emoji: '⚠️', color: '#f59e0b', alertType: 'goal_at_risk' },
@@ -49,6 +49,7 @@ const getNotificationContent = (type: string, respondentCode: string, qualitySta
         alertType: statusInfo.alertType,
         color: statusInfo.color
       };
+    }
     default:
       return {
         title: 'Session Update',

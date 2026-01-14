@@ -135,7 +135,7 @@ export function exportSessionToPDF(
       margin: { left: 14, right: 14 },
     });
 
-    yPos = (doc as any).lastAutoTable.finalY + 5;
+    yPos = ((doc as unknown as { lastAutoTable?: { finalY: number } }).lastAutoTable?.finalY ?? yPos) + 5;
 
     if (eq5dResponse.vas_score !== null) {
       doc.setFontSize(11);
@@ -198,7 +198,7 @@ export function exportSessionToPDF(
       },
     });
 
-    yPos = (doc as any).lastAutoTable.finalY + 10;
+    yPos = ((doc as unknown as { lastAutoTable?: { finalY: number } }).lastAutoTable?.finalY ?? yPos) + 10;
 
     // Calculate summary stats
     const avgValue = ttoResponses.reduce((sum, r) => sum + Number(r.final_value), 0) / ttoResponses.length;

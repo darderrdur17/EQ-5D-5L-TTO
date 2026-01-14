@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
@@ -48,11 +48,7 @@ export function EmailReportScheduler() {
   const [scheduleType, setScheduleType] = useState('weekly');
   const [emailAddress, setEmailAddress] = useState('');
 
-  useEffect(() => {
-    fetchSchedules();
-  }, []);
-
-  const fetchSchedules = async () => {
+  const fetchSchedules = useCallback(async () => {
     try {
       setLoading(true);
       const { data, error } = await supabase
@@ -72,7 +68,11 @@ export function EmailReportScheduler() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [toast]);
+
+  useEffect(() => {
+    fetchSchedules();
+  }, [fetchSchedules]);
 
   const handleCreateSchedule = async () => {
     if (!emailAddress || !emailAddress.includes('@')) {

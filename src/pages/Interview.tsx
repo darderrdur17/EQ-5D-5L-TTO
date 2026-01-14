@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Header } from '@/components/layout/Header';
@@ -18,6 +18,19 @@ import { cn } from '@/lib/utils';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/contexts/AuthContext';
 import { notifyInterviewCompleted } from '@/utils/notifications';
+import type { Tables } from '@/integrations/supabase/types';
+
+type EQ5DResponse = Tables<'eq5d_responses'>;
+
+// Type for EQ5D questionnaire component (uses camelCase)
+interface EQ5DQuestionnaireResponse {
+  mobility: number;
+  selfCare: number;
+  usualActivities: number;
+  painDiscomfort: number;
+  anxietyDepression: number;
+  vasScore: number;
+}
 
 type InterviewStep = 'consent' | 'warmup' | 'practice' | 'tto' | 'feedback' | 'dce' | 'demographics' | 'complete';
 
@@ -42,7 +55,7 @@ export default function Interview() {
   const [ttoValues, setTTOValues] = useState<number[]>([]);
   const [showCopilot, setShowCopilot] = useState(false);
   const [hasConsented, setHasConsented] = useState(false);
-  const [eq5dResponses, setEq5dResponses] = useState<any>(null);
+  const [eq5dResponses, setEq5dResponses] = useState<EQ5DResponse | null>(null);
   const [loading, setLoading] = useState(true);
 
   // Redirect if no session ID provided
@@ -52,14 +65,7 @@ export default function Interview() {
     }
   }, [resumeSessionId, navigate]);
 
-  // Load existing session if resuming
-  useEffect(() => {
-    if (resumeSessionId && user) {
-      loadExistingSession(resumeSessionId);
-    }
-  }, [resumeSessionId, user]);
-
-  const loadExistingSession = async (id: string) => {
+  const loadExistingSession = useCallback(async (id: string) => {
     setLoading(true);
     try {
       // Fetch session details
@@ -107,13 +113,21 @@ export default function Interview() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [navigate]);
+
+  // Load existing session if resuming
+  useEffect(() => {
+    if (resumeSessionId && user) {
+      loadExistingSession(resumeSessionId);
+    }
+  }, [resumeSessionId, user, loadExistingSession]);
+
 
   const updateSessionStep = async (step: InterviewStep) => {
     if (!sessionId) return;
     
     try {
-      const updateData: any = { current_step: step };
+      const updateData: { current_step: string; status?: string; completed_at?: string } = { current_step: step };
       if (step === 'complete') {
         updateData.status = 'completed';
         updateData.completed_at = new Date().toISOString();
@@ -185,8 +199,20 @@ export default function Interview() {
     }
   };
 
-  const handleEQ5DComplete = (responses: any) => {
-    setEq5dResponses(responses);
+  const handleEQ5DComplete = (responses: EQ5DQuestionnaireResponse) => {
+    // Convert questionnaire format to database format
+    const dbResponse: EQ5DResponse = {
+      id: '',
+      session_id: sessionId || '',
+      mobility: responses.mobility,
+      self_care: responses.selfCare,
+      usual_activities: responses.usualActivities,
+      pain_discomfort: responses.painDiscomfort,
+      anxiety_depression: responses.anxietyDepression,
+      vas_score: responses.vasScore,
+      created_at: new Date().toISOString(),
+    };
+    setEq5dResponses(dbResponse);
     handleNext();
   };
 

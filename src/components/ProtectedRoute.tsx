@@ -8,7 +8,7 @@ interface ProtectedRouteProps {
 }
 
 export function ProtectedRoute({ children, allowedRoles }: ProtectedRouteProps) {
-  const { user, isAuthenticated, isLoading } = useAuth();
+  const { user, role, isAuthenticated, isLoading } = useAuth();
   const location = useLocation();
 
   if (isLoading) {
@@ -23,9 +23,9 @@ export function ProtectedRoute({ children, allowedRoles }: ProtectedRouteProps) 
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
 
-  if (allowedRoles && user && !allowedRoles.includes(user.role as UserRole)) {
-    // Redirect to appropriate dashboard based on role
-    const redirectPath = user.role === 'admin' ? '/admin' : '/dashboard';
+  if (allowedRoles && role && !allowedRoles.includes(role)) {
+    // Redirect to appropriate dashboard based on resolved role
+    const redirectPath = role === 'admin' ? '/admin' : '/dashboard';
     return <Navigate to={redirectPath} replace />;
   }
 

@@ -29,16 +29,60 @@ interface InterviewerStats {
   approvalRate: number;
 }
 
+interface CompletionDataPoint {
+  date: string;
+  completed: number;
+  total: number;
+}
+
+interface TTODataPoint {
+  date: string;
+  value: number;
+}
+
+interface QualityDataPoint {
+  name: string;
+  value: number;
+  color: string;
+}
+
+interface WeeklyTrendPoint {
+  week: string;
+  sessions: number;
+  completed: number;
+  avgValue: number;
+}
+
+interface TTOByHealthStatePoint {
+  healthState: string;
+  fullState: string;
+  avgValue: number;
+  count: number;
+}
+
+interface TimeDistributionPoint {
+  range: string;
+  count: number;
+}
+
+interface InterviewerPerformance {
+  sessions: number;
+  completed: number;
+  approved: number;
+  totalTime: number;
+  timeCount: number;
+}
+
 export function ComprehensiveAnalytics() {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
-  const [completionData, setCompletionData] = useState<any[]>([]);
-  const [ttoData, setTTOData] = useState<any[]>([]);
-  const [qualityData, setQualityData] = useState<any[]>([]);
-  const [weeklyTrends, setWeeklyTrends] = useState<any[]>([]);
+  const [completionData, setCompletionData] = useState<CompletionDataPoint[]>([]);
+  const [ttoData, setTTOData] = useState<TTODataPoint[]>([]);
+  const [qualityData, setQualityData] = useState<QualityDataPoint[]>([]);
+  const [weeklyTrends, setWeeklyTrends] = useState<WeeklyTrendPoint[]>([]);
   const [interviewerStats, setInterviewerStats] = useState<InterviewerStats[]>([]);
-  const [ttoByHealthState, setTtoByHealthState] = useState<any[]>([]);
-  const [timeDistribution, setTimeDistribution] = useState<any[]>([]);
+  const [ttoByHealthState, setTtoByHealthState] = useState<TTOByHealthStatePoint[]>([]);
+  const [timeDistribution, setTimeDistribution] = useState<TimeDistributionPoint[]>([]);
   const [summary, setSummary] = useState({
     totalSessions: 0,
     completedSessions: 0,
@@ -241,7 +285,7 @@ export function ComprehensiveAnalytics() {
       setTimeDistribution(timeDist);
 
       // Interviewer performance stats
-      const interviewerMap = new Map<string, any>();
+      const interviewerMap = new Map<string, InterviewerPerformance>();
       
       sessions.forEach(s => {
         const current = interviewerMap.get(s.interviewer_id) || { 
@@ -496,11 +540,11 @@ export function ComprehensiveAnalytics() {
                         border: '1px solid hsl(var(--border))',
                         borderRadius: '8px'
                       }}
-                      formatter={(value: number, name: string, props: any) => [
-                        `${value} (n=${props.payload.count})`,
+                      formatter={(value: number, _name: string, props: { payload?: { count?: number } }) => [
+                        `${value} (n=${props.payload?.count ?? 0})`,
                         'Avg Value'
                       ]}
-                      labelFormatter={(label: string, payload: any) => 
+                      labelFormatter={(label: string, payload?: Array<{ payload?: { fullState?: string } }>) => 
                         payload?.[0]?.payload?.fullState || label
                       }
                     />

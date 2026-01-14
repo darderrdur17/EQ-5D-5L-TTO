@@ -1,12 +1,20 @@
 import { supabase } from '@/integrations/supabase/client';
+import type { Tables } from '@/integrations/supabase/types';
+
+type InterviewSession = Tables<'interview_sessions'>;
+type EQ5DResponse = Tables<'eq5d_responses'>;
+type TTOResponse = Tables<'tto_responses'>;
+type DCEResponse = Tables<'dce_responses'>;
+type Demographics = Tables<'demographics'>;
+type SessionNote = Tables<'session_notes'>;
 
 export interface ExportData {
-  sessions: any[];
-  eq5dResponses: any[];
-  ttoResponses: any[];
-  dceResponses: any[];
-  demographics: any[];
-  sessionNotes: any[];
+  sessions: InterviewSession[];
+  eq5dResponses: EQ5DResponse[];
+  ttoResponses: TTOResponse[];
+  dceResponses: DCEResponse[];
+  demographics: Demographics[];
+  sessionNotes: SessionNote[];
 }
 
 export const fetchExportData = async (): Promise<ExportData> => {
@@ -85,7 +93,9 @@ export const exportToCSV = (data: ExportData): void => {
   downloadBlob(blob, `tto-export-${getTimestamp()}.csv`);
 };
 
-const convertToCSV = (data: any[]): string => {
+type CSVRow = Record<string, string | number | null | undefined>;
+
+const convertToCSV = (data: CSVRow[]): string => {
   if (data.length === 0) return '';
   
   const headers = Object.keys(data[0]);

@@ -132,7 +132,7 @@ export async function exportBatchToPDF(
         margin: { left: 14, right: 14 },
       });
 
-      yPos = (doc as any).lastAutoTable.finalY + 4;
+      yPos = ((doc as unknown as { lastAutoTable?: { finalY: number } }).lastAutoTable?.finalY ?? yPos) + 4;
       doc.setFontSize(10);
       doc.text(`Health State: ${healthState} | VAS: ${eq5dResponse.vas_score ?? 'N/A'}`, 14, yPos);
     } else {
@@ -171,7 +171,7 @@ export async function exportBatchToPDF(
         },
       });
 
-      yPos = (doc as any).lastAutoTable.finalY + 4;
+      yPos = ((doc as unknown as { lastAutoTable?: { finalY: number } }).lastAutoTable?.finalY ?? yPos) + 4;
 
       // Summary stats
       const avgValue = ttoResponses.reduce((sum, r) => sum + Number(r.final_value), 0) / ttoResponses.length;

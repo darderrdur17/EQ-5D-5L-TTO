@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
@@ -76,11 +76,7 @@ export function PerformanceGoals() {
   const [targetValue, setTargetValue] = useState('');
   const [periodType, setPeriodType] = useState<'week' | 'month'>('week');
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     try {
       setLoading(true);
       
@@ -134,7 +130,11 @@ export function PerformanceGoals() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [toast]);
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
 
   const calculateCurrentValue = async (goal: PerformanceGoal): Promise<number> => {
     const { data: sessions } = await supabase
@@ -150,13 +150,15 @@ export function PerformanceGoals() {
       case 'sessions_per_week':
       case 'sessions_per_month':
         return sessions.length;
-      case 'completion_rate':
+      case 'completion_rate': {
         const completed = sessions.filter(s => s.status === 'completed').length;
         return Math.round((completed / sessions.length) * 100);
-      case 'approval_rate':
+      }
+      case 'approval_rate': {
         const approved = sessions.filter(s => s.quality_status === 'approved').length;
         const completedForApproval = sessions.filter(s => s.status === 'completed').length;
         return completedForApproval > 0 ? Math.round((approved / completedForApproval) * 100) : 0;
+      }
       default:
         return 0;
     }

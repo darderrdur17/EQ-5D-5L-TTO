@@ -134,11 +134,12 @@ export default function AdminUserManagement() {
       setShowCreateDialog(false);
       setNewUser({ email: '', password: '', fullName: '', role: 'interviewer' });
       fetchUsers();
-    } catch (error: any) {
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Failed to create user';
       toast({
         variant: 'destructive',
         title: 'Error',
-        description: error.message || 'Failed to create user'
+        description: errorMessage
       });
     } finally {
       setCreating(false);
@@ -168,11 +169,12 @@ export default function AdminUserManagement() {
       setShowEditDialog(false);
       setEditingUser(null);
       fetchUsers();
-    } catch (error: any) {
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Failed to update user';
       toast({
         variant: 'destructive',
         title: 'Error',
-        description: error.message || 'Failed to update user'
+        description: errorMessage
       });
     } finally {
       setSaving(false);
